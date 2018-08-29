@@ -1,5 +1,5 @@
 # Custom Error Handling
-
+![Preview Gif](Assets/Preview.gif)
 Here is an example of one way you can write custom errors in your applications.
 
 ## Language
