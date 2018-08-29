@@ -1,5 +1,5 @@
 # Custom Error Handling
-![Preview Gif](Assets/Preview.gif)
+![Preview Gif](Assets/https://github.com/markfilter/Swift-Custom-Errors/blob/master/Assets/preview.gif?raw=true)
 Here is an example of one way you can write custom errors in your applications.
 
 ## Language
