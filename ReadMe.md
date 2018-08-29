@@ -6,9 +6,6 @@ Here is an example of one way you can write custom errors in your applications.
 
 Swift 4 / Xcode 9
 
-```
-Give examples
-```
 
 ## Authors
 
