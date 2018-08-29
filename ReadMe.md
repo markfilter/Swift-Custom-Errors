@@ -1,5 +1,6 @@
 # Custom Error Handling
 ![Preview Gif](https://github.com/markfilter/Swift-Custom-Errors/blob/master/Assets/preview.gif)
+
 Here is an example of one way you can write custom errors in your applications.
 
 ## Language
