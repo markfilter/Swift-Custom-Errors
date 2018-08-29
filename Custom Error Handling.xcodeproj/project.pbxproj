@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		71DE68162137158D00664DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE68152137158D00664DB4 /* AppDelegate.swift */; };
-		71DE68182137158D00664DB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE68172137158D00664DB4 /* ViewController.swift */; };
+		71DE68182137158D00664DB4 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE68172137158D00664DB4 /* MainController.swift */; };
 		71DE681B2137158D00664DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DE68192137158D00664DB4 /* Main.storyboard */; };
 		71DE681D2137158F00664DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DE681C2137158F00664DB4 /* Assets.xcassets */; };
 		71DE68202137158F00664DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DE681E2137158F00664DB4 /* LaunchScreen.storyboard */; };
+		71DE682B213716CA00664DB4 /* FileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE682A213716CA00664DB4 /* FileSystemManager.swift */; };
+		71DE682D213725C500664DB4 /* super-secret-password-empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71DE682C213725C500664DB4 /* super-secret-password-empty.txt */; };
+		71DE682F213725E800664DB4 /* super-secret-password.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71DE682E213725E800664DB4 /* super-secret-password.txt */; };
+		71DE68312137340100664DB4 /* corrupted-file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71DE68302137340100664DB4 /* corrupted-file.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71DE68122137158D00664DB4 /* Custom Error Handling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Error Handling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DE68152137158D00664DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71DE68172137158D00664DB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71DE68172137158D00664DB4 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		71DE681A2137158D00664DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71DE681C2137158F00664DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71DE681F2137158F00664DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71DE68212137158F00664DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DE682A213716CA00664DB4 /* FileSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManager.swift; sourceTree = "<group>"; };
+		71DE682C213725C500664DB4 /* super-secret-password-empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "super-secret-password-empty.txt"; sourceTree = "<group>"; };
+		71DE682E213725E800664DB4 /* super-secret-password.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "super-secret-password.txt"; sourceTree = "<group>"; };
+		71DE68302137340100664DB4 /* corrupted-file.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "corrupted-file.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		71DE68142137158D00664DB4 /* Custom Error Handling */ = {
 			isa = PBXGroup;
 			children = (
-				71DE68152137158D00664DB4 /* AppDelegate.swift */,
-				71DE68172137158D00664DB4 /* ViewController.swift */,
-				71DE68192137158D00664DB4 /* Main.storyboard */,
+				71DE68272137159D00664DB4 /* App Delegate */,
+				71DE6829213716A700664DB4 /* File System */,
+				71DE68282137169C00664DB4 /* Main */,
 				71DE681C2137158F00664DB4 /* Assets.xcassets */,
 				71DE681E2137158F00664DB4 /* LaunchScreen.storyboard */,
 				71DE68212137158F00664DB4 /* Info.plist */,
 			);
 			path = "Custom Error Handling";
+			sourceTree = "<group>";
+		};
+		71DE68272137159D00664DB4 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				71DE68152137158D00664DB4 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		71DE68282137169C00664DB4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				71DE68172137158D00664DB4 /* MainController.swift */,
+				71DE68192137158D00664DB4 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		71DE6829213716A700664DB4 /* File System */ = {
+			isa = PBXGroup;
+			children = (
+				71DE682A213716CA00664DB4 /* FileSystemManager.swift */,
+				71DE682C213725C500664DB4 /* super-secret-password-empty.txt */,
+				71DE68302137340100664DB4 /* corrupted-file.txt */,
+				71DE682E213725E800664DB4 /* super-secret-password.txt */,
+			);
+			path = "File System";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DE68202137158F00664DB4 /* LaunchScreen.storyboard in Resources */,
+				71DE682F213725E800664DB4 /* super-secret-password.txt in Resources */,
+				71DE682D213725C500664DB4 /* super-secret-password-empty.txt in Resources */,
+				71DE68312137340100664DB4 /* corrupted-file.txt in Resources */,
 				71DE681D2137158F00664DB4 /* Assets.xcassets in Resources */,
 				71DE681B2137158D00664DB4 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DE68182137158D00664DB4 /* ViewController.swift in Sources */,
+				71DE68182137158D00664DB4 /* MainController.swift in Sources */,
 				71DE68162137158D00664DB4 /* AppDelegate.swift in Sources */,
+				71DE682B213716CA00664DB4 /* FileSystemManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,34 +18,143 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-AR-rYL">
-                                <rect key="frame" x="24" y="60" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNc-SB-BrD">
-                                <rect key="frame" x="24" y="595" width="327" height="48"/>
-                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-4U-sX9">
+                                <rect key="frame" x="24" y="80" width="327" height="128.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Super Secret Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULW-MU-msE">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iSQ-ww-tkI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aag-ga-iRa">
+                                        <rect key="frame" x="0.0" y="50" width="327" height="48"/>
+                                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="y7z-0r-1Ht"/>
+                                        </constraints>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handlerSaveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1po-qB-Q6N"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Output" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-AR-rYL">
+                                        <rect key="frame" x="0.0" y="108" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PCL-dh-zNW">
+                                <rect key="frame" x="24" y="421" width="327" height="222"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zl-E3-FOK">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="48"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="X0b-He-CQJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Load Proper File">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handlerLoadProperFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sk9-bt-8rc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuH-tV-tb9">
+                                        <rect key="frame" x="0.0" y="58" width="327" height="48"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="vF8-IC-G0J"/>
+                                        </constraints>
+                                        <state key="normal" title="Load Corrupted File"/>
+                                        <connections>
+                                            <action selector="handlerLoadCorruptedFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5Y-wI-YX2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-hX-vLE">
+                                        <rect key="frame" x="0.0" y="116" width="327" height="48"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="fzP-Ph-cMZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Load Empty File">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hanlderLoadEmptyFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EUw-cR-dlt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNc-SB-BrD">
+                                        <rect key="frame" x="0.0" y="174" width="327" height="48"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="J4g-Fk-Vlm"/>
+                                            <constraint firstAttribute="height" constant="48" id="raY-gl-8tz"/>
+                                        </constraints>
+                                        <state key="normal" title="Load Wrong File">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handlerWrongFileTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGf-vA-9fZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="raY-gl-8tz"/>
+                                    <constraint firstItem="5zl-E3-FOK" firstAttribute="leading" secondItem="PCL-dh-zNW" secondAttribute="leading" id="F9j-Vd-1Up"/>
+                                    <constraint firstAttribute="trailing" secondItem="NNc-SB-BrD" secondAttribute="trailing" id="UQv-tZ-oqJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bcW-hX-vLE" secondAttribute="trailing" id="WcD-Vf-yeG"/>
+                                    <constraint firstItem="RuH-tV-tb9" firstAttribute="leading" secondItem="PCL-dh-zNW" secondAttribute="leading" id="nkP-Nh-eG8"/>
+                                    <constraint firstItem="NNc-SB-BrD" firstAttribute="leading" secondItem="PCL-dh-zNW" secondAttribute="leading" id="sb1-tl-epT"/>
+                                    <constraint firstAttribute="trailing" secondItem="RuH-tV-tb9" secondAttribute="trailing" id="t8x-e6-gbQ"/>
+                                    <constraint firstItem="bcW-hX-vLE" firstAttribute="leading" secondItem="PCL-dh-zNW" secondAttribute="leading" id="xkd-N9-MwF"/>
+                                    <constraint firstAttribute="trailing" secondItem="5zl-E3-FOK" secondAttribute="trailing" id="zPK-il-3Wd"/>
                                 </constraints>
-                                <state key="normal" title="File System Error">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-vm-MtQ">
+                                <rect key="frame" x="24" y="232.5" width="327" height="164.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nl-Cn-2Be">
+                                        <rect key="frame" x="10" y="72" width="307" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Nl-Cn-2Be" firstAttribute="leading" secondItem="c3M-vm-MtQ" secondAttribute="leading" constant="10" id="MUv-K5-YXb"/>
+                                    <constraint firstItem="2Nl-Cn-2Be" firstAttribute="centerY" secondItem="c3M-vm-MtQ" secondAttribute="centerY" id="aNW-YY-538"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Nl-Cn-2Be" secondAttribute="trailing" constant="10" id="yHW-wg-SDg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BtA-AR-rYL" secondAttribute="trailing" constant="24" id="0S8-eY-180"/>
-                            <constraint firstItem="NNc-SB-BrD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="6ga-ey-ktk"/>
-                            <constraint firstItem="BtA-AR-rYL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="On5-S9-nzg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NNc-SB-BrD" secondAttribute="bottom" constant="24" id="P8Z-gO-NQk"/>
-                            <constraint firstItem="BtA-AR-rYL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="cho-Tb-jDk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NNc-SB-BrD" secondAttribute="trailing" constant="24" id="g8I-KT-HhZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PCL-dh-zNW" secondAttribute="trailing" constant="24" id="26R-g9-8J4"/>
+                            <constraint firstItem="c3M-vm-MtQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="3Ao-xj-cye"/>
+                            <constraint firstItem="PCL-dh-zNW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="3h7-xf-VYW"/>
+                            <constraint firstItem="KnP-4U-sX9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="MVA-UT-q6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PCL-dh-zNW" secondAttribute="bottom" constant="24" id="TSr-Is-FDJ"/>
+                            <constraint firstItem="PCL-dh-zNW" firstAttribute="top" secondItem="c3M-vm-MtQ" secondAttribute="bottom" constant="24" id="aiU-ew-Qqo"/>
+                            <constraint firstItem="KnP-4U-sX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="eUi-sc-bhO"/>
+                            <constraint firstItem="c3M-vm-MtQ" firstAttribute="top" secondItem="KnP-4U-sX9" secondAttribute="bottom" constant="24" id="kZl-kA-MON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KnP-4U-sX9" secondAttribute="trailing" constant="24" id="lfJ-zI-bgp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3M-vm-MtQ" secondAttribute="trailing" constant="24" id="tCr-DG-95E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="errorOutputLabel" destination="BtA-AR-rYL" id="mSt-6K-wZ9"/>
+                        <outlet property="passwordTextField" destination="ULW-MU-msE" id="INh-1o-qZu"/>
+                        <outlet property="secretPasswordLabel" destination="2Nl-Cn-2Be" id="dQR-9k-HIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

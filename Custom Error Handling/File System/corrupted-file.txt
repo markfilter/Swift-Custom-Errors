@@ -1,0 +1,1 @@
+This will read in as a corrupted file because the file has contents, but it cannot be parsed into JSON and conform to the Codable protocol.
